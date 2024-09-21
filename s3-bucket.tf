@@ -1,6 +1,5 @@
 module "s3-bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
+  source  = "terraform-aws-modules/s3-bucket/aws"
   version = "2.8.0"
-  bucket_prefix = "${var.prefix}-hashi"
-  acl    = "private"
+  bucket_prefix = var.prefix
   }
