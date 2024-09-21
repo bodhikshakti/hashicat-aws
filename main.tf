@@ -200,6 +200,8 @@ resource "aws_key_pair" "hashicat" {
   public_key = tls_private_key.hashicat.public_key_openssh
 }
 
-resource "s3-bucket" "hashicat" {
-  bucket = "my-s3-bucket-for-hashicat-lab-01"
+module "s3-bucket" {
+  source = "terraform-aws-modules/s3-bucket/aws"
+  version = "2.8.0"
+  bucket_prefix = var.prefix
 }
