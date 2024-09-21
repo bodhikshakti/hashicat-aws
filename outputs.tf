@@ -7,6 +7,6 @@ output "catapp_ip" {
   value = "http://${aws_eip.hashicat.public_ip}"
 }
 
-output "bucket_name" {
-  value = module.s3_bucket.bucket_name
-}
+# output "bucket_name" {
+#   value = module.s3_bucket.bucket_name
+# }
